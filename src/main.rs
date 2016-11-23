@@ -4,8 +4,10 @@ extern crate docopt;
 use docopt::Docopt;
 mod problem4;
 mod problem7;
+mod problem8;
+mod problem9;
 
-static IMPLEMENTED_PROBLEMS: &'static [i32] = &[4, 7];
+static IMPLEMENTED_PROBLEMS: &'static [i32] = &[4, 7, 8, 9];
 
 const USAGE: &'static str = "
 Project Euler problems, solved in Rust
@@ -45,6 +47,8 @@ fn main() {
         match args.arg_n {
         	4 => problem4::run(),
             7 => problem7::run(),
+            8 => problem8::run(),
+            9 => problem9::run(),
             _ => println!("Unsolved problem! Use `euler list` for a list of solvable problems.")
         }
     }
