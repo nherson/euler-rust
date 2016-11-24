@@ -6,8 +6,9 @@ mod problem4;
 mod problem7;
 mod problem8;
 mod problem9;
+mod problem14;
 
-static IMPLEMENTED_PROBLEMS: &'static [i32] = &[4, 7, 8, 9];
+static IMPLEMENTED_PROBLEMS: &'static [i32] = &[4, 7, 8, 9, 14];
 
 const USAGE: &'static str = "
 Project Euler problems, solved in Rust
@@ -49,6 +50,7 @@ fn main() {
             7 => problem7::run(),
             8 => problem8::run(),
             9 => problem9::run(),
+            14 => problem14::run(),
             _ => println!("Unsolved problem! Use `euler list` for a list of solvable problems.")
         }
     }
